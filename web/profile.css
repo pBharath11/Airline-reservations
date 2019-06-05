@@ -1,0 +1,115 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 Dec, 2018, 5:18:23 PM
+    Author     : bharath
+*/
+  body {
+            background: url(vincent-versluis-240048-unsplash.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            font-size: 100%;
+            font-family: 'Lato', sans-serif;
+            margin: 3em;
+      font-family: sans-serif;font-weight: bold;
+        }
+
+        .body_m {
+            background: #999;
+        }
+
+
+           
+
+        img {
+            border-radius: 50%;
+            height: 150px;
+        }
+
+
+        #titulo {
+            font-size: 20px;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            color: #f6b3a4;
+            margin-top: .5em;
+            font-weight: normal;
+        }
+
+        .flip-container {
+            margin: 0 auto;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+        }
+
+            .flip-container:hover .flipper {
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+
+        .flipper {
+            background: #fff;
+            -webkit-transition: 0.6s;
+            -webkit-transform-style: preserve-3d;
+            -moz-transition: 0.6s;
+            -moz-transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front, .back {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            text-align: center;
+            padding-top: 30px;
+            background: #141212;
+            height: 100px;
+            z-index: 1;
+            border-radius: 15px;
+        }
+        
+        
+
+        .flip-container, .front , .back {
+            width: 30.375em;
+            height: 30.375em;
+        }
+
+        .back {
+            background: #f44336;
+            padding-top: 30px;
+            border-radius:15px;
+            -webkit-transform: rotateY(-180deg);
+            -moz-transform: rotateY(-180deg);
+        }
+
+            .back p {
+                margin-left: 30px;
+                
+                color: white;
+                font-weight: 300;
+            }
+
+        /*blur*/
+
+        .blurry {
+            -webkit-filter: blur(7px);
+            filter: blur(7px);
+            -webkit-transform: translateY(0px) translate3d(0,0,0);
+        }

@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="SHORTCUT ICON" href="logo.ico">
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>Airline Reservations-Home
+    </title>
+</head>
+ <body>
+     <ul class="slideshow">
+  <li><span>Image 01</span></li>
+  <li><span>Image 02</span></li>
+  <li><span>Image 03</span></li>
+  <li><span>Image 04</span></li>
+  <li><span>Image 05</span></li>
+  <li><span>Image 06</span></li>
+</ul>
+     <img src="logo" width="90" height="90">
+  <div class="container">
+    <header>
+      <h1>Airline Reservations</h1>
+  </header>
+</div>
+ <ul class="navbar">
+  <li><a id="home" class="active" href="Homepage.html">Home</a></li>
+  <li><a id="bflights" href="bookedflights.jsp">Booked Flights</a></li>
+  
+  <li><a id="profile" class="material-icons" href="profile.jsp">person</a></li>
+  <li><a id="logoutsm" href="login.html" onclick="session.inValidate()">Logout</a></li>
+</ul>
+     <text1 id="check">Hot Deals</text1>
+     
+        <div class="search_flights">
+        <form method="post" action="aftersearchflights.jsp">
+        <h1 id="searchflights">Search Flights</h1>
+            <table>
+            <tr>
+            <td>
+                <p>From </p>
+                <input type="text" name="from" placeholder="From" required></td>
+                <td>
+                <p>To</p>
+                    <input  id="to" type="text" name="to" placeholder="To" required></td>
+                </tr>
+                <tr>
+                    <ul id="radiobtn" required>
+  <li id="oneway">
+    <input type="radio" id="f-option" name="radiobtn" onchange="resetVisibility()" value="oneway">
+    <label for="f-option" value="oneway">One Way</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li id="roundtrip">
+    <input type="radio" id="s-option" name="radiobtn" onchange="changeVisibility()" value="roundtrip">
+    <!--<label for="s-option" value="roundtrip">Round Trip</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  --></li>
+                    </ul>
+                    
+                </tr>
+                <tr>
+                    <td><p id="dep">Departure</p><input type="date" name="departure" id="dep_date" required></td>
+                    <td><p id="arr"> Arrival</p><input type="date" id="arr_date" name="arrival"></td>
+            
+            </tr>
+            </table>
+<button class="btn">Search<i class="fa fa-search"></i></button>
+        </form>
+        </div>
+        
+        <script> function resetVisibility() {
+    document.getElementById("arr").style.visibility ="hidden";
+    document.getElementById("arr_date").style.visibility ="hidden";
+     document.getElementById("dep").style.visibility ="visible";
+    document.getElementById("dep_date").style.visibility ="visible";
+}
+            
+        function changeVisibility() {
+    document.getElementById("arr").style.visibility ="visible";
+    document.getElementById("arr_date").style.visibility ="visible";
+    document.getElementById("dep").style.visibility ="visible";
+    document.getElementById("dep_date").style.visibility ="visible";
+}
+
+        </script>
+    </body>
+</html>
